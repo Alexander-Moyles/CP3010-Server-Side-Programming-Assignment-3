@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavBar() {
+export default function Header() {
     return (
         <>
             <Link href = "/">HOME </Link>
