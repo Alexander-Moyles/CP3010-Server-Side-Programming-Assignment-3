@@ -10,7 +10,7 @@ export default function Home() {
         Welcome to the page, checkout some of the characters
       </div>
       <Image
-        src="/images/richard_and_mordicai.png"
+        src="/richard_and_mordicai.png"
         alt="Rick & Morty"
         width={327.5}
         height={325}
