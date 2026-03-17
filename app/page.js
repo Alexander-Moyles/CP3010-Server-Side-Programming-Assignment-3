@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <>
       <h1>
-        Rick and Morty Page
+        Rick & Morty Webpage
       </h1>
       <div>
-        Welcome to the page, checkout some of the characters
+        Welcome to the webpage, checkout some of the characters!
       </div>
       <Image
         src="/richard_and_mordicai.png"

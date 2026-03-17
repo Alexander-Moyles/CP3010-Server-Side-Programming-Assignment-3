@@ -1,12 +1,21 @@
 import Character from "@/Components/Character";
 
-export default async function CharacterDetail(props) {
-    const {id} = await props.params;
+export async function generateStaticParams() {
+    const response = await fetch(`https://rickandmortyapi.com/api/character`);
+    const data = await response.json();
+
+    return data.results.map((chara) => ({
+        id: chara.id.toString()
+    }))
+}
+
+export default async function CharacterDetail({params}) {
+    const {id} = await params;
 
     const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-    const result = await response.json();
+    const data = await response.json();
     
     return (
-        <Character name={result.name} species={result.species} image={result.image}></Character>
+        <Character name={data.name} species={data.species} image={data.image}></Character>
     )
 }
